@@ -20,7 +20,7 @@
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body { font-family: 'Noto Sans KR', sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; }
 
-  .sync-bar { background: var(--text); color: white; font-size: 11px; font-weight: 600; text-align: center; padding: 5px 12px; transition: background 0.3s; position: fixed; bottom: 52px; left: 0; right: 0; z-index: 98; }
+  .sync-bar { background: rgba(26, 58, 42, 0.4); color: white; font-size: 11px; font-weight: 600; text-align: center; padding: 5px 12px; transition: background 0.3s; position: fixed; bottom: 52px; left: 0; right: 0; z-index: 98; }
   .sync-bar.syncing { background: var(--accent); }
   .sync-bar.error { background: var(--red); }
 
@@ -149,8 +149,7 @@
     .badge { font-size: 9px; padding: 1px 5px; }
   }
   .bottom-nav { display: none; }
-  .bottom-nav button { flex: 1; border: none; background: white; padding: 8px 2px 6px; font-family: 'Noto Sans KR', sans-serif; font-size: 9px; font-weight: 600; color: var(--text-muted); cursor: pointer; display: flex; flex-direction: column; align-items: center; gap: 2px; transition: color 0.2s; }
-  .bottom-nav button .nav-icon { font-size: 18px; line-height: 1; }
+  .bottom-nav button { flex: 1; border: none; background: white; padding: 12px 2px; font-family: 'Noto Sans KR', sans-serif; font-size: 11px; font-weight: 600; color: var(--text-muted); cursor: pointer; display: flex; align-items: center; justify-content: center; transition: color 0.2s; }
   .bottom-nav button.active { color: var(--accent); }
 
 </style>
@@ -264,11 +263,11 @@
 
 <!-- 하단 네비 (모바일) -->
 <nav class="bottom-nav" id="bottom-nav" style="position:fixed;bottom:0;left:0;right:0;z-index:99;border-top:1px solid var(--border);box-shadow:0 -2px 12px rgba(0,0,0,0.08)">
-  <button class="active" onclick="switchTab('overview',this);syncBottomNav(this)"><span class="nav-icon">📊</span>요약</button>
-  <button onclick="switchTab('income',this);syncBottomNav(this)"><span class="nav-icon">💵</span>수입</button>
-  <button onclick="switchTab('variable',this);syncBottomNav(this)"><span class="nav-icon">💳</span>변동비</button>
-  <button onclick="switchTab('fixed',this);syncBottomNav(this)"><span class="nav-icon">📋</span>고정비</button>
-  <button onclick="switchTab('savings',this);syncBottomNav(this)"><span class="nav-icon">🏦</span>자산</button>
+  <button class="active" onclick="switchTab('overview',this);syncBottomNav(this)">요약</button>
+  <button onclick="switchTab('income',this);syncBottomNav(this)">수입</button>
+  <button onclick="switchTab('variable',this);syncBottomNav(this)">변동비</button>
+  <button onclick="switchTab('fixed',this);syncBottomNav(this)">고정비</button>
+  <button onclick="switchTab('savings',this);syncBottomNav(this)">자산</button>
 </nav>
 
 <!-- 문자 파싱 모달 -->
